@@ -1,10 +1,9 @@
 function updateTime() {
     const now = new Date();
-    const currentDay = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"][now.getUTCDay()];
-    const currentUTC = now.toISOString().split('T')[1].split('.')[0];
+    const currentUTC = now.getTime(); // Get the current time in milliseconds
 
-    document.querySelector('[data-testid="currentDayOfTheWeek"]').textContent = `Today is ${currentDay}`;
-    document.querySelector('[data-testid="currentUTCTime"]').textContent = `UTC Time: ${currentUTC}`;
+    document.querySelector('[data-testid="currentDayOfTheWeek"]').textContent = `Today is ${["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"][now.getUTCDay()]}`;
+    document.querySelector('[data-testid="currentUTCTime"]').textContent = `UTC Time (in milliseconds): ${currentUTC}`;
 }
 
 // Update time initially
