@@ -1,2 +1,2 @@
-# Zuri-Frontend-page-creation-with-specifuic-elements
+# Zuri-Frontend-page-creation-with-specific-elements
 stage one project
