@@ -8,8 +8,22 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div data-testid="slackUserName">Freda Efod</div>
-<img src="slack-pic.jpg" alt="Your Slack Picture" data-testid="slackDisplayImage">
+    <div class="profile" >
+        <h1 data-testid="slackUserName">Freda Efod
+        <img src="slack-pic.jpg" alt="Your Slack Picture" data-testid="slackDisplayImage">
+    </div>
+    <div class="details" >
+        <script>
+            const now = new Date();
+            
+            document.querySelector('[data-testid="currentDayOfTheWeek"]').textContent = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"][now.getUTCDay()];
+            document.querySelector('[data-testid="currentUTCTime"]').textContent = now.toISOString().split('T')[1].split('.')[0];
+        </script>
+    </div>
+    <div data-testid="myTrack">Frontend</div>
+<a href="https://github.com/Fredaekaraefod/Zuri-Frontend-page-creation-with-specifuic-elements" data-testid="githubURL">GitHub Repository</a>
 
+
+<script src=""script.js"></script>
 </body>
 </html>
